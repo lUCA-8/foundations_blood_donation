@@ -1,0 +1,80 @@
+    {% extends "base.html" %} {% block title %}Home Page{% endblock %} {% block content
+      %}
+      
+    
+        <section class="main-container ds-flex-main ">
+          <div class="video-container px-5 py-3 ds-flex-sub">
+      <iframe width="100%" height="500px" src="https://www.youtube.com/embed/FvG7MyDsEjg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="main-container-text py-3 ">
+      <h2>Lorem ipsum dolor sit amet, sunt in culpa qui officia deserunt mollit.</h2>
+      <h2>Lorem ipsum dolor sit amet, sunt in culpa qui officia deserunt mollit.</h2>
+      <h2>Lorem ipsum dolor sit amet, sunt in culpa qui officia deserunt.</h2>
+      </div>
+          </div>
+          <div class="nav-conatiner-mobile">
+          <a id="signUp" class="btn-lg btn-primary button my-" href="/login">Login</a>
+          <a id="signUp" class="btn-lg btn-primary button my-" href="/sign-up">Start Save Lifes!</a>
+          <a type="submit" class="btn-lg btn-primary button my-">Contact us</a>
+          <a type="submit" class="btn-lg btn-primary button my-">About us</a>
+      
+      
+          </div>
+          <div class="form">
+              <div class="form">
+                  <form method="POST" class="px-5 py-3">
+                  <div class="form-group">
+                    <label for="exampleDropdownFormEmail1">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"/>      </div>
+                  
+                  <div class="form-group">
+                    <label for="exampleDropdownFormPassword1">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" />
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                      <label class="form-check-label" for="dropdownCheck">
+                        Remember me
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-light" id="login" href="/home">Login</button>
+                  <a class="d-block py-3" style="color:black;" href="#">Forgot password?</a>
+              
+              
+                  
+              
+              
+                </form>
+            
+                <button onclick="togglePopup()" class="btn-lg btn-primary button my-">Start Save Lifes!</button>
+        
+      
+      </div>
+      <div class="popup" id="popup_1">
+        <div class="content">
+          <div class="main_container pc_flex">
+            
+            <div class="policy-container">
+              <div class="close-btn " onclick="togglePopup()">×</div>
+              <h1>Non Profitable website</h1>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis atque velit dolor. Obcaecati ad cupiditate pariatur fugiat, sunt ipsam doloribus a. Possimus enim quisquam consequatur reiciendis repellat omnis maiores modi?</p>
+              <div class="popup_button">
+                <a id="signUp" class="btn-lg btn-primary button my- " href="/sign-up">Next</a>
+              </div>
+            </div>
+            
+      </div>
+           </div>
+         </div>
+  
+        
+    
+        </section>
+    
+        <script src="{{url_for('static', filename='index.js')}}"></script>
+    
+      
+      {% endblock %}
+    
+    
